@@ -6,6 +6,9 @@ class Repository<T> {
     fun create(id:String, value: T){
         storage[id] = value
     }
+    fun delete(id:String) = storage.remove(id)
 
-    fun findById(id:String): T? = storage[id]
+    fun findAll() = storage.values
+
+    fun findById(id:String) = storage[id]
 }
