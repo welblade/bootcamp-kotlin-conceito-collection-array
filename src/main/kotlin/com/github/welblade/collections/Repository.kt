@@ -4,6 +4,7 @@ class Repository<T> {
     private val storage: MutableMap<String, T> = mutableMapOf()
 
     fun create(id:String, value: T){
+        if(id.isNotBlank())
         storage[id] = value
     }
     fun delete(id:String) = storage.remove(id)
