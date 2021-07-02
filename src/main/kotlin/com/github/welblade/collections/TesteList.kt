@@ -22,4 +22,8 @@ fun main() {
     println("------------------------------------")
     val findMary = workers.find { it.name == "Maria" }
     println( findMary )
+    println("------------------------------------")
+    workers
+        .sortedBy { it.wage }
+        .forEach { println(it) }
 }
